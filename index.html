@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br" Xmanifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pau a Pixel Design Movies</title>
+    <meta name="description" content="Produção Audiovisual">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="css/main.css">
+     
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="img/bolinha.png">
+    <meta name="theme-color" content="#F77F00">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Pau a Pixel Design Movies">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon-precomposed" href="img/bolinha.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/bolinha.png">
+    <meta name="msapplication-TileColor" content="#F77F00">
+
+    <script>
+    if (window.location.protocol != "https:" && window.location.hostname == "patriciaestevestrindade.github.io")
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>
+
+</head>
+<body>
+<div class="current-page">
+
+<main class="home">
+	
+    <section id="installBanner" class="banner">
+      <button id="installBtn"> Instalar aplicativo </button>
+    </section>
+
+	<h1 class="z-depth-1">Pau a Pixel Design Movies</h1>
+
+	<div class="collection z-depth-1">
+        <a href="storyline.html" class="collection-item waves-effect">
+            <i class="material-icons">book</i>
+            Storyline
+        </a>    
+
+        <a href="sinopse.html" class="collection-item waves-effect">
+            <i class="material-icons">flip_to_front</i>
+            Sinopse
+        </a>
+
+        <a href="argumento.html" class="collection-item waves-effect">
+            <i class="material-icons">bookmark_border</i>
+            Argumento
+        </a>
+
+        <a href="escaleta.html" class="collection-item waves-effect">
+            <i class="material-icons">description</i>
+            Escaleta
+        </a>
+	</div>
+
+</main>
+
+</div><!--/.current-page -->
+
+<script>
+     let deferredPrompt;
+     window.addEventListener('beforeinstallprompt', event => {
+
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      event.preventDefault();
+
+      //Stash the event so it can be triggered later
+      deferredPrompt = event;
+
+      //Attach the install prompt to a user gesture
+      document.querySelector('#installBtn').addEventListener('click', event => {
+
+        //Show the prompt
+        deferredPrompt.prompt();
+
+        //wait for the user to respon to the prompt
+        deferredPrompt.userChoice
+        .then ((choiceResult) => {
+          if (choiceResult.outcome === 'accepted'){
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log ('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+      //Update UI notify the user they can add to home screen
+      document.querySelector('#installBanner').style.display = 'flex';
+     });
+   </script>
+<script src="js/vendor/jquery-3.4.1.min.js"></script>
+<script src="js/vendor/materialize.min.js"></script>
+<!--<script src="js/spa.js"></script>
+<script src="js/vendor/materialize-0.97.0.min.js"></script>-->
+<script src="js/main.js"></script>
+<script src="js/install.js"></script>
+
+</body>
+</html>
+

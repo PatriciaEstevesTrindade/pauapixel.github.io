@@ -1,0 +1,16 @@
+{
+  "short_name": "Paul a Pixel",
+  "name": "Paul a Pixel Design Movies",
+  "icons": [
+    {
+      "src": "img/bolinha.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#F77F00",
+  "background_color": "#FFB400"
+}

@@ -1,0 +1,27 @@
+CACHE MANIFEST
+
+
+CACHE:
+./files.json
+./index.html
+./storyline.html
+./manifest.json
+./css/main.css
+./img/home2.jpg
+./icons/MaterialIcons-Regular.ttf
+./icons/material.css
+./img/icon2.png
+./js/install.js
+./js/main.js
+./js/vendor/jquery-3.4.1.min.js
+./js/vendor/materialize.min.css
+./js/vendor/materialize.min.js
+
+
+NETWORK:
+*
+
+
+SETTINGS:
+prefer-online
+
