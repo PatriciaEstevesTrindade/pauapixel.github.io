@@ -13,17 +13,6 @@ font-feature-settings:"liga"}.cyan.lighten-5{background-color:#e0f7fa!important}
 .grey-text.text-darken-3{color:#424242!important}.black-text{color:#000!important}
 .white{background-color:#fff!important}.white-text{color:#fff!important}
 
-#divContent{
- overflow:auto; 
-}
-
-
-@media screen and (max-width:360px){
-    #divContent{
-     overflow:scroll; 
-       border:solid 1px green;
-    }
-}
 
 .banner {
   align-content: center;
@@ -68,7 +57,7 @@ font-feature-settings:"liga"}.cyan.lighten-5{background-color:#e0f7fa!important}
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}main{display:block}a{background-color:transparent}a:active,a:hover{outline:0;-webkit-overflow-scrolling: touch;}
+body{margin:0}main{display:block}a{background-color:transparent}a:active,a:hover{outline:0}
 strong{font-weight:700}h1{font-size:2em;margin:.67em 0}img{border:0}
 button,input{color:inherit;font:inherit;margin:0}button{overflow:visible;text-transform:none}
 button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
