@@ -13,6 +13,18 @@ font-feature-settings:"liga"}.cyan.lighten-5{background-color:#e0f7fa!important}
 .grey-text.text-darken-3{color:#424242!important}.black-text{color:#000!important}
 .white{background-color:#fff!important}.white-text{color:#fff!important}
 
+#divContent{
+ overflow:auto; 
+}
+
+
+@media screen and (max-width:360px){
+    #divContent{
+     overflow:scroll; 
+       border:solid 1px green;
+    }
+}
+
 .banner {
   align-content: center;
   display: none;
